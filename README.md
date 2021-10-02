@@ -1,0 +1,1 @@
+https://fakercloud.com/api/v1/schema/YAwmBkGb?apiKey=H5hCR9Ua&rows=100
