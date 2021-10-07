@@ -4,14 +4,25 @@ import "./App.css";
 import Axios from "axios";
 
 function App() {
-  Axios.get('https://api.github.com/users/drulacosmin')
-  .then((response) => {
-    console.log(response.data);
-    console.log(response.status);
-    console.log(response.statusText);
-    console.log(response.headers);
-    console.log(response.config);
-  });
+  var axios = require("axios").default;
+
+var options = {
+  method: 'GET',
+  url: 'https://google-translate1.p.rapidapi.com/language/translate/v2/languages',
+  headers: {
+    'accept-encoding': 'application/gzip',
+    'x-rapidapi-host': 'google-translate1.p.rapidapi.com',
+    'x-rapidapi-key': '55217e4de7msh8fcd6dd1e058781p1b2e13jsnb14f39a62954'
+  }
+};
+
+axios.request(options).then(function (response) {
+  var f = response.data
+	console.log(f);
+}).catch(function (error) {
+	console.error(error);
+});
+  
 
   return (
     <div className="App">
